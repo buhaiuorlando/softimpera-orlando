@@ -167,15 +167,11 @@ body {
 
 .display-p-1 {
     color: var(--color-primary);
+    font-family: var(--font-secondary);
     font-size: 1.125rem;
     font-weight: normal;
     font-style: italic;
 
-}
-
-.card-item-p{
-    color: var(--color-primary);
-    font-style: italic;
 }
 
 .mb-1 {
@@ -383,6 +379,7 @@ nav {
 
 
 .card-image img {
+    object-fit: cover;
     width: 370px;
     height: 260px;
 }
