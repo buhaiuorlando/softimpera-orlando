@@ -72,7 +72,7 @@ function updateMediciiCarousel() {
 
 
 let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 30,
     breakpoints: {
         320: {
@@ -111,3 +111,12 @@ document.querySelectorAll('.avantaje-item').forEach(item => {
 });
 
 
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('header'); 
+    var scrollPosition = window.scrollY; 
+    if (scrollPosition > 50) { 
+        header.classList.add('scrolled'); 
+    } else {
+        header.classList.remove('scrolled'); 
+    }
+});
