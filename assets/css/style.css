@@ -1,0 +1,1229 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+:root {
+    --font-primary: 'Arimo', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --color-primary: #c99a2e;
+    --color-secondary: #49505A;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--font-primary);
+}
+
+
+/*Pentru  H2*/
+.h2 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .display-p-1 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+
+@media (min-width: 1281px) {
+    .hero-title {
+        font-size: 60px;
+    }
+
+
+    .footer-content {
+        padding: 50px 0;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .carousel {
+        padding: 10px;
+    }
+
+    .clinica-content {
+        flex-direction: row;
+    }
+
+    .footer-content {
+        padding: 40px 0;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .carousel {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clinica-content {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .carousel-container {
+        max-width: 800px;
+    }
+
+    .footer-content {
+        padding: 30px 0;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .clinica-text p{
+        text-align: justify;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .clinica-content {
+        flex-direction: column;
+    }
+
+    .card-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero {
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .clinica-content {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        padding: 20px 0;
+    }
+}
+
+.display-p-1 {
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+.card-item-p{
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+.mb-1 {
+    margin-bottom: 15px;
+}
+
+.mt-1 {
+    margin-top: 15px;
+}
+
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-header img {
+    width: 80px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.nav-links a.active {
+    color: #d1a300;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+i.fa.fa-envelope.envelope {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+nav {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e6b800;
+}
+
+.cta-button.secondary.clinica {
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.cta-button:hover, .cta-button.secondary.clinica:hover {
+    background-color: #d1a300;
+}
+
+.hero {
+    background-image: url('/assets/image/banner-hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+.hero-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.hero-title {
+    font-size: 66px;
+    color: var(--color-secondary);
+}
+
+.hero-subtitle {
+    color: var(--color-primary);
+}
+
+.hero-content {
+    width: 100%;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
+    font-style: italic;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+}
+
+.hero-buttons .cta-button {
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-style: normal;
+    border-radius: 0;
+    border-radius: 5px;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-direction: row;
+}
+
+.cta-button.secondary {
+    background-color: var(--color-primary);
+    ;
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+}
+
+
+/* Secțiunea Servicii Clinica */
+.servicii-clinica {
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Carousel Container */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+    flex-wrap: nowrap;
+    padding: 2px;
+}
+
+.card-item {
+    width: 370px;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Box-shadow doar pe text */
+.card-text {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.card-image img {
+    width: 370px;
+    height: 260px;
+}
+
+/* Pagination */
+.carousel-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-number {
+    margin: 0 10px;
+    cursor: pointer;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.page-number.active {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: var(--color-primary);
+}
+
+.carousel-next {
+    color: var(--color-primary);
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: background-color 0.3s ease;
+}
+
+/* Secțiunea cli-noastra */
+.clinica-noastra {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 60px 0 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Textul introductiv */
+.intro-text {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+/* Bara galbena sub text */
+.intro-text .line::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e6b800;
+    margin: 15px auto 0;
+}
+
+.clinica-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.clinica-image {
+    flex: 1;
+    position: relative;
+    top: 40px;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.clinica-image img {
+    width: 100%;
+    position: relative;
+}
+
+.clinica-text {
+    flex: 1;
+    text-align: left;
+    padding-top: 40px;
+}
+
+.clinica-text p {
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+    color: white;
+}
+
+/* Secțiunea med-nostri */
+.medicii-noastri-section {
+    background-color: #fff;
+    color: #333;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.medicii-intro {
+    margin-bottom: 40px;
+}
+
+
+.medicii-subtext {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Carousel Container */
+.medicii-carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.medicii-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.medicii-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.medicii-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.medicii-img {
+    margin-bottom: 15px;
+}
+
+.medicii-role {
+    font-size: 14px;
+    color: #e6b800;
+}
+
+x.medicii-carousel-prev, .medicii-carousel-next {
+    background-color: transparent;
+    border: 2px solid #e6b800;
+    color: #e6b800;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.medicii-carousel-prev {
+    left: -50px;
+}
+
+.medicii-carousel-next {
+    right: -50px;
+}
+
+.medicii-carousel-prev:hover, .medicii-carousel-next:hover {
+    background-color: #e6b800;
+    color: white;
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+/* CTA Button */
+.medicii-cta-button {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.medicii-cta-button:hover {
+    background-color: #d1a300;
+}
+
+
+/* Secțiunea Avantaje Artis */
+.avantaje-artis-section {
+    background-image: url('/assets/image/avantaje-artis-bg.png');
+    background-position: right center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avantaje-artis-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.avantaje-text {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.avantaje-subtitle {
+    font-style: italic;
+    color: #999;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.avantaje-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Lista Avantaje */
+.avantaje-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.avantaje-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 80%;
+    transition: background-color 0.3s ease;
+}
+
+.avantaje-item:hover {
+    background-color: #f8f8f8;
+}
+
+.avantaje-number {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.avantaje-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.avantaje-arrow-container {
+    background-color: #e6b800;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.avantaje-arrow {
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+/* Descrierea */
+.avantaje-description {
+    display: none;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.avantaje-item.active .avantaje-description {
+    display: block;
+}
+
+.avantaje-image {
+    flex: 1;
+}
+
+.avantaje-image img {
+    width: 100%;
+}
+
+
+/* Contactează-ne */
+.contact-blog-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contact-blog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/* Stil pentru ambele coloane */
+.contact-col, .blog-col {
+    width: 50%;
+}
+
+/* Contactează-ne */
+.contact-content {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-image img {
+    width: 300px;
+    height: 250px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-rating .stars {
+    color: #e6b800;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact-rating .reviews {
+    font-size: 16px;
+    color: #666;
+}
+
+.view-map {
+    color: #007bff;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* Ultimele Articole */
+.blog-post {
+    display: flex;
+    gap: 20px;
+}
+
+.post-image-container {
+    position: relative;
+    border-radius: 10px;
+}
+
+.post-image-container img {
+    object-fit: cover;
+}
+
+.post-date-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e6b800;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.post-date-overlay .day {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.post-date-overlay .month {
+    font-size: 12px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+
+.post-excerpt {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    font-size: 14px;
+    color: white;
+    background-color: var(--color-secondary);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 60%;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #555;
+}
+
+
+
+/* Footer general */
+footer {
+    position: relative;
+    background-color: #FEECC4;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-info p, a {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+
+.fa {
+    font-size: 30px;
+    color: #EEE0D6;
+}
+
+.top {
+    font-size: 24px;
+    color: #000000;
+}
+
+.facebook, .instagram, .twitter, .pinterest {
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.facebook {
+    background-color: #4B64A5;
+}
+
+.instagram {
+    background-color: #6C6C70;
+}
+
+.twitter {
+    background-color: #11ABE1;
+}
+
+.pinterest {
+    background-color: #C51F25;
+}
+
+.footer-social-icons {
+    margin-top: 30px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Meniul de jos */
+.footer-bottom {
+    padding: 20px 0;
+    background-color: #FEECC4;
+    border-top: 1px solid #c89728;
+}
+
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left a, .footer-menu a, .footer-right a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right .back-to-top:hover {
+    color: #e6b800;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    border: 2px solid #e6b800;
+    color: #e6b800;
+    width: 50px;
+    height: 40px;
+    border-radius: 50px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 20px;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next:after {
+    content: "\2192";
+}
+
+.swiper-button-prev:after {
+    content: "\2190";
+}
+
+.mySwiper {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.mobile-menu-btn {
+    border: none;
+    display: none;
+    background-color: transparent;
+
+}
+
+.mobile-menu-btn i {
+    color: #000000;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.desktop-hidden {
+    display: none;
+}
+.menu-btn-wraper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@media(max-width: 1240px) {
+    .nav-links li {
+        margin-left: 0px;
+    }
+    .nav-links a{
+        font-size: 14px;
+    }
+    .cta-button.mobile-hidden{
+        padding: 12px 16px;
+    }
+    .post-image-container img{
+        width: 288px;
+    }
+}
+
+@media(max-width: 991px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .medicii-carousel-next {
+        right: 0;
+    }
+
+    .medicii-carousel-prev {
+        left: 0;
+    }
+
+    .contact-blog-container {
+        flex-direction: column;
+    }
+
+    .contact-col, .blog-col {
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    header nav {
+        position: fixed;
+        top: 85px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #FFF;
+        z-index: 999;
+        right: 0;
+        height: calc(100vh - 85px);
+        width: 280px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+    }
+
+    header nav.open {
+        transform: translateX(0);
+    }
+
+    header nav .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        overflow: auto;
+    }
+
+    .nav-links a {
+        font-weight: 400;
+    }
+
+    .carousel,
+    .footer-menu,
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-container {
+        row-gap: 15px;
+    }
+
+    .footer-info {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .clinica-noastra {
+        padding-bottom: 60px;
+    }
+
+    footer {
+        padding-top: 40px;
+    }
+}
+
+@media(max-width: 575px) {
+
+    .avantaje-text {
+        padding-right: 0;
+    }
+
+    .contact-content,
+    .blog-post {
+        flex-direction: column;
+    }
+
+    .avantaje-text {
+        flex: unset;
+    }
+
+    .card-item {
+        margin: 0;
+    }
+
+    .card-item,
+    .card-image img {
+        flex-direction: column-reverse;
+        width: 280px;
+    }
+
+    .card-image img,
+    .contact-image img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .contact-image img,
+    .post-image-container img {
+        width: 288px;
+    }
+
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .facebook, .instagram, .twitter, .pinterest {
+        width: 40px;
+        height: 40px;
+    }
+
+    .fa {
+        font-size: 20px;
+    }
+
+    .footer-social-icons a {
+        margin: 0 4px;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .desktop-hidden {
+        display: flex;
+        justify-content: center;
+        height: 45px;
+        align-items: center;
+    }
+
+}
+
+@media(max-width: 425px) {
+    .hero-buttons .cta-button {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.svg-footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.svg-footer svg {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .svg-footer-1 {
+        margin-bottom: -350px; 
+    }
+
+    .svg-footer-2 {
+        margin-bottom: -120px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .svg-footer-1 {
+        margin-bottom: -100px; 
+    }
+
+    .svg-footer-2 {
+        margin-bottom: -45px; 
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .svg-footer-1 {
+        margin-bottom: -170px; 
+    }
+
+    .svg-footer-2 {
+        margin-bottom: -70px; 
+    }
+}
