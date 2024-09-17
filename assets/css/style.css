@@ -648,9 +648,11 @@ x.medicii-carousel-prev, .medicii-carousel-next {
     cursor: pointer;
     position: relative;
     display: block;
-    width: 80%;
+    width: 100%;
+    max-width: 600px; 
     transition: background-color 0.3s ease;
 }
+
 
 .avantaje-item:hover {
     background-color: #f8f8f8;
@@ -675,7 +677,7 @@ x.medicii-carousel-prev, .medicii-carousel-next {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: -20px;
+    right: 10px; 
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
@@ -693,6 +695,7 @@ x.medicii-carousel-prev, .medicii-carousel-next {
     margin-top: 15px;
     font-size: 16px;
     color: #666;
+    transition: all 0.3s ease; 
 }
 
 .avantaje-item.active .avantaje-description {
@@ -756,7 +759,6 @@ x.medicii-carousel-prev, .medicii-carousel-next {
 
 .contact-rating .stars {
     color: #e6b800;
-    font-size: 20px;
     margin-right: 10px;
 }
 
@@ -827,24 +829,32 @@ x.medicii-carousel-prev, .medicii-carousel-next {
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .read-more-btn {
-    font-size: 14px;
     color: white;
     background-color: var(--color-secondary);
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem; 
     text-decoration: none;
     border-radius: 5px;
-    width: 60%;
+    max-width: 100%; 
+    display: inline-block; 
     text-transform: uppercase;
+    text-align: center; 
     transition: background-color 0.3s ease;
+    box-sizing: border-box; 
 }
 
 .read-more-btn:hover {
     background-color: #555;
 }
 
+@media (min-width: 768px) {
+    .read-more-btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
 
 
 /* Footer general */
@@ -1040,7 +1050,7 @@ footer {
     }
 
     .contact-blog-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .contact-col, .blog-col {
@@ -1225,5 +1235,77 @@ footer {
 
     .svg-footer-2 {
         margin-bottom: -70px; 
+    }
+}
+
+
+@media (min-width: 1281px) {
+    .avantaje-item {
+        max-width: 600px; 
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .avantaje-item {
+        max-width: 550px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .avantaje-artis-content {
+        flex-direction: column; 
+    }
+
+    .avantaje-item {
+        width: 100%; 
+        max-width: none;
+    }
+
+    .avantaje-arrow-container {
+        right: 10px; 
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .avantaje-artis-content {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .avantaje-text {
+        padding-right: 0;
+    }
+
+    .avantaje-item {
+        width: 100%; 
+    }
+
+    .avantaje-arrow-container {
+        right: -30px; 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .avantaje-artis-content {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .avantaje-text {
+        padding-right: 0;
+    }
+
+    .avantaje-item {
+        width: 100%; 
+    }
+
+    .avantaje-arrow-container {
+        right: 5px;
+    }
+
+    .avantaje-description {
+        font-size: 14px; 
     }
 }
